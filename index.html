@@ -72,6 +72,21 @@
         .dl-icon{width:36px;height:36px;background:var(--bg);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--red);flex-shrink:0;font-weight:600}
         .dl-text .dl-name{font-size:14px;font-weight:500;color:var(--dark)}
         .dl-text .dl-desc{font-size:12px;color:var(--text-muted);margin-top:2px}
+        .bylaws{margin-top:32px;background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+        .bylaws-toggle{width:100%;padding:18px 24px;background:none;border:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:15px;font-weight:600;color:var(--dark);font-family:inherit}
+        .bylaws-toggle .arrow{transition:transform .2s;font-size:12px;color:var(--text-muted)}
+        .bylaws-toggle.open .arrow{transform:rotate(180deg)}
+        .bylaws-content{display:none;padding:0 24px 24px;font-size:14px;color:var(--text-light);line-height:1.9}
+        .bylaws-content.show{display:block}
+        .bylaws-content h5{font-size:15px;color:var(--dark);margin:20px 0 10px;font-weight:600}
+        .bylaws-content h5:first-child{margin-top:0}
+        .bylaws-content p{margin-bottom:10px}
+        .bylaws-content ol,.bylaws-content ul{margin:8px 0 14px 20px}
+        .bylaws-content li{margin-bottom:4px}
+        .org-detail{margin-top:24px}
+        .org-detail h5{font-size:15px;font-weight:600;color:var(--dark);margin-bottom:12px}
+        .org-detail p{font-size:14px;color:var(--text-light);line-height:1.8;margin-bottom:8px}
+        .org-detail .role-title{font-weight:500;color:var(--dark)}
         .contact-wrap{background:var(--dark);color:var(--white)}
         .contact-wrap .section-header h3{color:var(--white)}
         .contact-wrap .section-header .en{color:rgba(255,255,255,.4)}
@@ -216,23 +231,119 @@
         </div>
         <div class="about-grid">
             <div class="about-text">
-                <p>瑞典华人总会（Sveriges Kinesiska Riksförbund）是瑞典最具代表性的华人社团联合组织，致力于维护旅瑞华人的合法权益，传承和弘扬中华民族优秀传统文化，加强瑞典各华人社团之间的团结与合作。</p>
+                <p>瑞典华人总会（Sveriges Kinesiska Riksförbund，简称瑞华总会）是代表全瑞典华人、华侨、留学生及其社团的非宗教、非政治、非营利性群众联合体，具有独立的法人资格，总部设在斯德哥尔摩。</p>
+                <p>瑞华总会以维护华人在瑞典的合法权益，增强在瑞华侨华人社区团结互助，弘扬中国传统文化，推动中瑞两国民间交流和合作为宗旨。瑞华总会以本章程为基本的活动准则，并依照瑞典法律独立开展工作。</p>
                 <p>总会下辖19个会员组织，涵盖商会、同乡会、文化团体、学生学者联谊会、妇女协会、体育协会等，覆盖瑞典全国各主要城市，服务数千名旅瑞华人华侨。</p>
                 <p>多年来，总会积极组织各类文化活动、慰侨活动、体育赛事，为促进中瑞文化交流、帮助华人融入瑞典社会做出了重要贡献。</p>
-                <p>根据总会章程，会员大会为最高决策机构，需三分之二以上代表出席方可召开。理事会任期三年，连选得连任一届。总会运营年度为每年1月1日至12月31日。</p>
             </div>
             <div class="about-card">
-                <h4>组织概况</h4>
-                <div class="info-row"><span class="info-label">会长</span><span class="info-value">叶克清</span></div>
-                <div class="info-row"><span class="info-label">名誉会长</span><span class="info-value">杨龙、白亨利、李润生、宗金波</span></div>
+                <h4>组织架构（2016年7月16日）</h4>
+                <div class="info-row"><span class="info-label">主席（法人代表）</span><span class="info-value">叶克清</span></div>
+                <div class="info-row"><span class="info-label">名誉主席</span><span class="info-value">杨龙、白亨利、李润生、宗金波</span></div>
+                <div class="info-row"><span class="info-label">高级顾问团</span><span class="info-value">裴志超、夏雨、段茂利、曾庆平、刘峰、赵丽杰</span></div>
                 <div class="info-row"><span class="info-label">执行主席</span><span class="info-value">叶沛群</span></div>
                 <div class="info-row"><span class="info-label">秘书长</span><span class="info-value">唐兵</span></div>
                 <div class="info-row"><span class="info-label">执行秘书长</span><span class="info-value">王钰清</span></div>
-                <div class="info-row"><span class="info-label">财务</span><span class="info-value">伍王令</span></div>
-                <div class="info-row"><span class="info-label">审计委员会主任</span><span class="info-value">耿浩杰</span></div>
-                <div class="info-row"><span class="info-label">会员组织</span><span class="info-value">19个</span></div>
+                <div class="info-row"><span class="info-label">财务负责</span><span class="info-value">伍王令</span></div>
+                <div class="info-row"><span class="info-label">审计委员会主席</span><span class="info-value">耿浩杰</span></div>
+                <div class="info-row"><span class="info-label">推举委员会主席</span><span class="info-value">甘建广</span></div>
+                <div class="info-row"><span class="info-label">妇女儿童委员会主席</span><span class="info-value">王钰清</span></div>
                 <div class="info-row"><span class="info-label">团体会费</span><span class="info-value">10 SEK/人/年</span></div>
                 <div class="info-row"><span class="info-label">个人会费</span><span class="info-value">100 SEK/年</span></div>
+            </div>
+        </div>
+
+        <div class="org-detail">
+            <h5>常务理事（排名不分先后）</h5>
+            <p>叶克清、叶沛群、安明玉、甘建广、唐兵、叶克雄、程鑫、王钰清、王艾芹、张翼、吴俊博、伍王令、徐力、陈德忠、张巧珍、王梅霜、陈芃芃、郝琦、卢琦</p>
+            <h5>副主席（排名不分先后）</h5>
+            <p>曹望凯、顾丰、胡永明、金雷、林春明、林若群、刘晨、刘东山、刘荣生、王明生、吴奇、夏大庆、祝捷、杨哲、安伟、叶沛剑、詹维权、张巧伟、张少华、郑王平、周阳、陈帅、何勇、张小丽、赵福红、林若杰、周斌、周民伟、李玮、朱俊、金献伟、夏海栋、夏海龙、黄炳旺、孙王敏、付子豹、刘春旭、王泽丰、兰方明、曹博、王速、吴晶、陆超人、莫郎峰、李博、任文君</p>
+            <h5>副秘书长</h5>
+            <p>程鑫、伍王令、卢琦、徐力、刘鹏、刘晨、王艾芹、何勇、耿浩杰、熊梓屹</p>
+            <h5>妇女儿童委员会</h5>
+            <p><span class="role-title">主席：</span>王钰清<br><span class="role-title">副主席：</span>陈芃芃、王艾芹、王梅霜<br><span class="role-title">常务理事：</span>郝琦、任文君、王速、吴晶、李博、王瑛、赵文洁、李玮、李红露、赵丹<br><span class="role-title">秘书长：</span>黄淼<br><span class="role-title">副秘书长：</span>刘春旭、刘洁萍</p>
+        </div>
+
+        <!-- 中文章程 -->
+        <div class="bylaws" id="bylaws-cn">
+            <button class="bylaws-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">
+                瑞典华人总会章程（中文版）
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="bylaws-content">
+                <h5>总则</h5>
+                <p>瑞典华人总会(简称瑞华总会)是代表全瑞典华人、华侨、留学生及其社团的、非宗教、非政治、非营利性群众联合体，具有独立的法人资格，总部设在斯德哥尔摩。</p>
+                <p>瑞华总会以维护华人在瑞典的合法权益，增强在瑞华侨华人社区团结互助，弘扬中国传统文化，推动中瑞两国民间交流和合作为宗旨。</p>
+                <p>瑞华总会以本章程为基本的活动准则，并依照瑞典法律独立开展工作。</p>
+
+                <h5>第一章 职能任务</h5>
+                <ol>
+                    <li>保护总会会员的在瑞典的合法权益，支持并协调其成员协会的工作；</li>
+                    <li>促进华人华侨社区的交流，增强华人的凝聚力；</li>
+                    <li>帮助和支持瑞典华人适应并融入瑞典社会；</li>
+                    <li>加强与瑞典其他各族群的联系和沟通，促进族群和谐；</li>
+                    <li>增进瑞典公众对中国历史文化的了解，促进民间的各种交流协作；</li>
+                    <li>增加对下属中文学校的支持力度，强化在瑞华人子女的中文教育。</li>
+                </ol>
+
+                <h5>第二章 组织制度</h5>
+                <p><strong>2.1 组织机构</strong><br>瑞华总会的组织机构包括：年度代表大会；常务理事会，审计委员会，推举委员会；总会会长；秘书处，财务处。</p>
+                <p><strong>2.2 年度代表大会</strong><br>瑞华总会年度代表大会由各会员协会选举产生的理事组成，是总会的最高决策机构，于每年5月召开，出席会议的理事超过总数的三分之二以上所做的决议将视为有效。</p>
+                <p><strong>2.3 常务理事会</strong><br>常务理事会是瑞华总会年度代表大会的常设机构，它是年度代表大会闭会期间的最高决策机构。设主席、副主席和七名常务理事。常务理事会会议每季度至少召开一次。</p>
+                <p><strong>2.4 总会会长</strong><br>瑞华总会设会长、常务副会长各一名，副会长若干名，由年度代表大会从总会的正式会员中选举产生。其中会长和常务副会长每届任期三年，连续任职不得超过两届。总会会长是瑞华总会的法人代表。</p>
+                <p><strong>2.5 审计委员会</strong><br>审计委员会负责瑞华总会内外审计的沟通、监督、核查等工作，由年度代表大会选举产生，主席一名、委员四名。</p>
+                <p><strong>2.6 推举委员会</strong><br>推举委员会负责为瑞华总会各个机构举荐合适的候选人，设主席一名、委员四名。</p>
+                <p><strong>2.7 秘书处</strong><br>秘书处是瑞华总会日常活动的工作机构，主要负责文件的制定和发放、档案的保存和管理，以及各项活动的组织和实施。由秘书长、副秘书长和若干名干事组成。</p>
+                <p><strong>2.8 财务处</strong><br>在常务理事会领导下，负责起草总会年度预算报告，管理总会名下账目和流动资产。会计年度定为每自然年的1月1日至12月31日。</p>
+
+                <h5>第三章 会员</h5>
+                <p><strong>3.1 团体会员</strong><br>瑞典境内依法登记注册的各类华人协会或团体，承认并遵守本章程，即获得申请成为瑞华总会团体会员的资格。团体会员应于每年四月三十日之前缴纳会费，会费的标准为10克朗/人/年。</p>
+                <p><strong>3.2 个人会员</strong><br>凡在瑞典合法居住的，无论国籍、性别、民族、宗教信仰，承认并拥护瑞华总会章程的个人，即可申请加入。个人会费标准为100克朗/年。</p>
+                <p><strong>3.3 荣誉成员</strong><br>对瑞华总会有一定特殊贡献的会员，经由常务理事会推举，并通过年度代表大会表决后，即可获得终身荣誉会员的称号。</p>
+
+                <h5>第四章 资产管理</h5>
+                <p>总会活动经费来源包括：会费、政府拨款和补助、捐赠、其他合法收入。总会经费必须用于章程所规定的用途，不得在会员中分配。瑞华总会解散或撤销时，其剩余财产扣除清算费用后归全体会员所有。</p>
+
+                <h5>第六章 附则</h5>
+                <p>瑞典华人总会的瑞典文名称为 Sveriges Kinesiska Riksförbund (SKR)，英文名称为 Union of Chinese Associations in Sweden。章程修改须由超过三分之二的与会代表表决通过方可进行。撤销或解散总会须经年度代表大会五分之四以上的理事表决通过。当中文版本条款与瑞典文版本有冲突时，以瑞典文版本为准。</p>
+            </div>
+        </div>
+
+        <!-- 瑞典语章程 -->
+        <div class="bylaws" id="bylaws-sv" style="margin-top:12px">
+            <button class="bylaws-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">
+                Sveriges Kinesiska Riksförbunds Stadgar (svenska)
+                <span class="arrow">&#9660;</span>
+            </button>
+            <div class="bylaws-content">
+                <h5>Allmänt</h5>
+                <p>Sveriges Kinesiska Riksförbund (kallad för Ruihua Zonghui) vars medlemmar består av kineser bosatta i Sveriges kineser, utlandskineser, kinesiska studenter och andra kinesiska föreningar i Sverige. Föreningen är religiöst, politiskt obunden och icke vinstdrivande.</p>
+                <p>Sveriges Kinesiska Riksförbund har till syfte att försvara medlemmarnas rättigheter och intressen i Sverige, att stärka enighet och solidaritet mellan kineser och kinesiska föreningar, att förmedla den traditionella kinesiska kulturen, att främja utbyte och samarbete mellan Sverige och Kina.</p>
+                <p>Förbundets verksamhetsområde är i Sverige. Förbundets kansli ligger i Stockholm.</p>
+
+                <h5>Kapitel 1. Uppgifter</h5>
+                <ol>
+                    <li>Att försvara medlemmarnas rättigheter och intressen i Sverige, att stödja och samordna medlemsföreningarnas arbete.</li>
+                    <li>Att främja utbyteskontakt mellan kineser och lokala föreningar, samt att stärka sammanhållningen bland kineser.</li>
+                    <li>Att hjälpa och stödja svenska kineser att anpassa sig och integrera sig i det svenska samhället.</li>
+                    <li>Att stärka kommunikationen med det mångkulturella Sverige och att främja alla kulturer.</li>
+                    <li>Att öka den svenska allmänhetens förståelse för kinesisk historia och kultur, samt att främja ett flertal olika icke-statliga utbyten och samarbeten.</li>
+                    <li>Att öka stödet för kinesiska skolor och att stärka barnens kinesiska kultur och språkutbildning.</li>
+                </ol>
+
+                <h5>Kapitel 2. Organisatoriskt system</h5>
+                <p>Sveriges Kinesiska Riksförbundet består av: Styrelseledamöter, ordförande, permanent styrelse, sekretariat, revisionskommitté, valkommitté och särskilda ledamöter. Styrelseledamöter är valda av föreningsmedlemmarna och är det högsta beslutande organet. Alla resolutioner kommer att betraktas som giltiga vid två tredjedelars majoritet av ledamöterna.</p>
+                <p>Den permanenta styrelsen ledar styrelsemöte. Minst en gång varje kvartal äger rum styrelsemöte. Ordförande och Viceordförande är officiellt valda av årsmötets ledamöter och deras mandat kan förlängas.</p>
+
+                <h5>Kapitel 3. Medlemskap</h5>
+                <p>Alla kinesiska föreningar eller grupper som i enlighet med lagstiftningen är registrerade i Sverige, följer stadgar, är behöriga att ansöka om tillträde. Medlemmarna ska betala medlemsavgift 10 kronor/person/år senast den 30 april varje år. Om ingen inbetalning skett sker automatisk uteslutning ur Riksförbundet.</p>
+
+                <h5>Kapitel 4. Förvaltning av tillgångar</h5>
+                <p>Förbundets inkomstkällor: medlemsavgifter, bidrag från statliga och kommunala myndigheter, gåvor, och andra lagliga källor. Verksamhetsåret är 1 januari till 31 december.</p>
+
+                <h5>Kapitel 6. Övrigt</h5>
+                <p>Förbundets namn är "Sveriges Kinesiska Riksförbund (SKR)" på svenska. Förändringar i förbundets stadgar kan endast ske vid årsmötet. För stadgeändring krävs 2/3 av de närvarande ombudens röster. Beslut om upplösning av förbundet kan endast tas av årsmötet, och kräver 4/5 av rösterna.</p>
+                <p>Ändringar gäller f.o.m 2014-08-23</p>
             </div>
         </div>
     </div>
