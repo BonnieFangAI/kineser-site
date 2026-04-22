@@ -87,6 +87,31 @@
         .org-detail h5{font-size:15px;font-weight:600;color:var(--dark);margin-bottom:12px}
         .org-detail p{font-size:14px;color:var(--text-light);line-height:1.8;margin-bottom:8px}
         .org-detail .role-title{font-weight:500;color:var(--dark)}
+        .join-wrap{background:linear-gradient(135deg,var(--red-dark) 0%,var(--red) 100%);color:var(--white);position:relative;overflow:hidden}
+        .join-wrap::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3C/g%3E%3C/svg%3E")}
+        .join-wrap .section{position:relative}
+        .join-wrap .section-header h3{color:var(--white)}
+        .join-wrap .section-header .en{color:rgba(255,255,255,.5)}
+        .join-wrap .section-line{background:var(--gold-light)}
+        .join-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+        .join-info h4{font-family:'Noto Serif SC',serif;font-size:18px;margin-bottom:16px;color:var(--gold-light)}
+        .join-info p{font-size:14px;line-height:1.85;opacity:.9;margin-bottom:12px}
+        .join-info ul{list-style:none;margin:16px 0}
+        .join-info li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:14px;display:flex;gap:10px;align-items:baseline}
+        .join-info li:last-child{border-bottom:none}
+        .join-info li::before{content:'';width:5px;height:5px;background:var(--gold-light);border-radius:50%;flex-shrink:0;margin-top:6px}
+        .join-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:32px}
+        .join-card h4{font-family:'Noto Serif SC',serif;font-size:16px;margin-bottom:20px;color:var(--gold-light)}
+        .join-step{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start}
+        .join-step-num{width:28px;height:28px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;color:var(--gold-light)}
+        .join-step-text{font-size:14px;line-height:1.7;opacity:.9}
+        .join-step-text strong{color:var(--gold-light);font-weight:500}
+        .join-fees{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+        .join-fees h5{font-size:14px;color:var(--gold-light);margin-bottom:12px}
+        .fee-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;opacity:.85;border-bottom:1px solid rgba(255,255,255,.06)}
+        .fee-row:last-child{border-bottom:none}
+        .fee-row .fee-val{font-weight:600;color:var(--gold-light)}
+        @media(max-width:768px){.join-grid{grid-template-columns:1fr}}
         .contact-wrap{background:var(--dark);color:var(--white)}
         .contact-wrap .section-header h3{color:var(--white)}
         .contact-wrap .section-header .en{color:rgba(255,255,255,.4)}
@@ -128,6 +153,7 @@
             <a href="#about">关于总会</a>
             <a href="#members">会员组织</a>
             <a href="#downloads">文件下载</a>
+            <a href="#join">入会申请</a>
             <a href="#contact">联系我们</a>
         </nav>
         <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">菜单</button>
@@ -389,6 +415,59 @@
             <a class="download-item" href="#"><div class="dl-icon">PDF</div><div class="dl-text"><div class="dl-name">Sveriges Kinesiska Riksförbunds Stadgar</div><div class="dl-desc">总会章程（瑞典语版）</div></div></a>
             <a class="download-item" href="#"><div class="dl-icon">DOC</div><div class="dl-text"><div class="dl-name">经费申请表</div><div class="dl-desc">会员组织活动经费申请</div></div></a>
             <a class="download-item" href="#"><div class="dl-icon">DOC</div><div class="dl-text"><div class="dl-name">机构成员入会申请</div><div class="dl-desc">新组织申请加入总会</div></div></a>
+        </div>
+    </div>
+</section>
+
+<!-- 入会申请 -->
+<section class="join-wrap" id="join">
+    <div class="section">
+        <div class="section-header">
+            <h3>入会申请</h3>
+            <span class="en">Membership Application</span>
+            <div class="section-line"></div>
+        </div>
+        <div class="join-grid">
+            <div class="join-info">
+                <h4>团体会员</h4>
+                <p>瑞典境内依法登记注册的各类华人协会或团体，承认并遵守瑞华总会章程，即获得申请成为团体会员的资格。</p>
+                <p>需提供以下材料：</p>
+                <ul>
+                    <li>入会书面申请一份</li>
+                    <li>政府部门所颁发的登记证书复印件两份</li>
+                    <li>协会相关章程及成员名单一份</li>
+                </ul>
+                <p>经审批通过后即成为瑞华总会的正式团体会员。团体会员有选举权和被选举权，有权利平等共享总会的各种资源，可委派代表参加总会组织的各项活动和会议。</p>
+
+                <h4 style="margin-top:28px">个人会员</h4>
+                <p>凡在瑞典合法居住的，无论国籍、性别、民族、宗教信仰，承认并拥护瑞华总会章程的个人，即可申请加入。提交入会书面申请一份，经审批通过后即成为正式会员。</p>
+                <p>年满十八周岁的会员享有选举和被选举权，有权参加总会各项活动，有权对总会工作提出意见和建议。</p>
+            </div>
+            <div class="join-card">
+                <h4>申请流程</h4>
+                <div class="join-step">
+                    <div class="join-step-num">1</div>
+                    <div class="join-step-text">准备申请材料（团体会员需提供登记证书、章程、名单；个人会员提交书面申请）</div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-num">2</div>
+                    <div class="join-step-text">将申请材料提交至总会秘书处，联系邮箱：<strong>info@kineser.se</strong></div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-num">3</div>
+                    <div class="join-step-text">常务理事会审批申请材料</div>
+                </div>
+                <div class="join-step">
+                    <div class="join-step-num">4</div>
+                    <div class="join-step-text">审批通过后正式成为瑞华总会会员，缴纳年度会费</div>
+                </div>
+                <div class="join-fees">
+                    <h5>会费标准</h5>
+                    <div class="fee-row"><span>团体会员</span><span class="fee-val">10 SEK / 人 / 年</span></div>
+                    <div class="fee-row"><span>个人会员</span><span class="fee-val">100 SEK / 年</span></div>
+                    <div class="fee-row"><span>缴费截止</span><span class="fee-val">每年4月30日</span></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
